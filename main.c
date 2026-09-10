@@ -24,4 +24,3 @@ printf("a divisão é: %d\n", (a / b));
 
 return 0;
 
-}
