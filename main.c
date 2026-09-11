@@ -7,16 +7,14 @@ int main(){
 SetConsoleCP(65001);
 SetConsoleOutputCP(65001);
 
-//teste
-//teste 2
+int idade;
 
-int n;
+printf("Digite a idade: ");
+scanf("%d", &idade);
 
-printf("Digite um número:");
-scanf("%d", &n);
+printf("Equivale a %d meses\n", idade * 12);
+printf("Equivale a %d dias (aproximado)\n", idade * 365);
 
-printf("Antecessor: %d\n", n - 1);
-printf("Sucessor: %d\n", n + 1);
 
 return 0;
 
