@@ -20,3 +20,4 @@ printf("Sucessor: %d\n", n + 1);
 return 0;
 
 }
+
