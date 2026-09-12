@@ -7,14 +7,13 @@ int main(){
 SetConsoleCP(65001);
 SetConsoleOutputCP(65001);
 
-float n1, n2, n3, media;
+float celsius, fahrenheit;
 
-printf("Digite três notas: ");
-scanf("%f %f %f", &n1, &n2, &n3);
+printf("digite a temperatura em celsius: ");
+scanf("%f", &celsius);
 
-media= (n1 + n2 + n3) / 3;
-
-printf("média %.2f\n", media);
+fahrenheit = (celsius * 9.0 / 5.0) + 32;
+printf("fahrenheit: %.2f\n", fahrenheit);
 
 return 0;
 
