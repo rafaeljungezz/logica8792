@@ -8,17 +8,20 @@ SetConsoleCP(65001);
 SetConsoleOutputCP(65001);
 
 
-int segundos, horas, minutos, resto;
+int n;
 
-    printf("DIgite a quantidade de seguntos: ");
-    scanf("%d", &segundos);
+    printf("digite um número: ");
+    scanf("%d", &n);
 
-    horas = segundos / 3600;
-    minutos = (segundos % 3600) / 60;
-    resto = segundos % 60;
+//if(....){
+//     code..
+//}
 
-    printf("%d horas, %d minutos e %d segundos\n", horas, minutos, resto);
-
+if(n > 0){
+    printf("positivo\n");
+}else{
+    printf("negativo\n");
+}
 
 
 return 0;
