@@ -8,25 +8,19 @@ SetConsoleCP(65001);
 SetConsoleOutputCP(65001);
 
 
-int idade;
+int a,b,c, maior;
 
 
 
-printf("digite uma idade: ");
-scanf("%d", &idade);
+printf("digite tres números ");
+scanf("%d %d %d", &a, &b, &c);
 
-if(idade >= 50){
-     printf("você é um sênior!");
-}else if(idade >= 18){
-    printf("Você é um maior de idade!");
-}else if(idade >= 12){
-    printf("Você é um adolescente!");
-}else if(idade >= 9){
-    printf("você é um pré-adolescente");
-}else{
-    printf("voçê é uma criança");
-}
+maior = a;
 
+if(b > maior) maior = b;
+if(c > maior) maior = c;
+
+printf("maior: %d", maior); 
 
 return 0;
 
