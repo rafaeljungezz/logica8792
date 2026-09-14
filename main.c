@@ -8,17 +8,19 @@ SetConsoleCP(65001);
 SetConsoleOutputCP(65001);
 
 
-int a,b,c, maior;
+int a, b , c, d, e, maior;
 
 
 
-printf("digite tres números ");
-scanf("%d %d %d", &a, &b, &c);
+printf("digite cinco números ");
+scanf("%d %d %d %d %d", &a, &b, &c, &d, &e);
 
 maior = a;
 
 if(b > maior) maior = b;
 if(c > maior) maior = c;
+if(d > maior) maior = d;
+if(e > maior) maior = e;
 
 printf("maior: %d", maior); 
 
