@@ -19,8 +19,10 @@ int n;
 
 if(n > 0){
     printf("positivo\n");
-}else{
+}else if(n < 0){
     printf("negativo\n");
+}else{
+    printf("igual 0");
 }
 
 
