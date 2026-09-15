@@ -7,52 +7,16 @@ int main(){
 SetConsoleCP(65001);
 SetConsoleOutputCP(65001);
 
+int a, b;
 
-int a, b , c, d, e, menor, maior;
+printf("digite dois números: ");
+scanf("%d %d", &a, &b);
 
-
-printf("digite um número para a: ");
-scanf("%d", &a);
-
-
-printf("digite um número para b: ");
-scanf("%d", &b);
-
-
-printf("digite um número para c: ");
-scanf("%d", &c);
-
-
-printf("digite um número para d: ");
-scanf("%d", &d);
-
-
-printf("digite um valor para e: ");
-scanf("%d", &e);
-
-
-menor = a;
-
-
-if(b < menor) menor = b;
-if(c < menor) menor = c;
-if(d < menor) menor = d;
-if(e < menor) menor = e;
-
-
-printf("menor: %d", menor);
-
-
-maior = a;
-
-
-if(b > maior) maior = b;
-if(c > maior) maior = c;
-if(d > maior) maior = d;
-if(e > maior) maior = e;
-
-
-printf("\nmaior: %d", maior);
+if( a == b){
+    printf("os números são iguais!\n");
+}else{
+    printf("os números sãó diferentes!\n");
+}
 
 
 return 0;
