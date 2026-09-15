@@ -8,22 +8,54 @@ SetConsoleCP(65001);
 SetConsoleOutputCP(65001);
 
 
-int a, b , c, d, e, maior;
+int a, b , c, d, e, menor, maior;
 
 
+printf("digite um número para a: ");
+scanf("%d", &a);
 
-printf("digite cinco números ");
-scanf("%d %d %d %d %d", &a, &b, &c, &d, &e);
+
+printf("digite um número para b: ");
+scanf("%d", &b);
+
+
+printf("digite um número para c: ");
+scanf("%d", &c);
+
+
+printf("digite um número para d: ");
+scanf("%d", &d);
+
+
+printf("digite um valor para e: ");
+scanf("%d", &e);
+
+
+menor = a;
+
+
+if(b < menor) menor = b;
+if(c < menor) menor = c;
+if(d < menor) menor = d;
+if(e < menor) menor = e;
+
+
+printf("menor: %d", menor);
+
 
 maior = a;
+
 
 if(b > maior) maior = b;
 if(c > maior) maior = c;
 if(d > maior) maior = d;
 if(e > maior) maior = e;
 
-printf("maior: %d", maior); 
+
+printf("\nmaior: %d", maior);
+
 
 return 0;
+
 
 }
