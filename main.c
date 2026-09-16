@@ -7,15 +7,17 @@ int main(){
 SetConsoleCP(65001);
 SetConsoleOutputCP(65001);
 
-int a, b;
+int a, b, c;
 
-printf("digite dois números: ");
-scanf("%d %d", &a, &b);
+printf("digite três números: ");
+scanf("%d %d %d", &a, &b, &c);
 
-if( a == b){
-    printf("os números são iguais!\n");
+if( a != b) && (b != c){
+    printf("os números são diferentes!\n");
+}else if(b != c){
+    printf("os números sãó igauis!\n");
 }else{
-    printf("os números sãó diferentes!\n");
+    printf("todos os números são iguais!");
 }
 
 
