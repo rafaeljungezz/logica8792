@@ -7,19 +7,30 @@ int main(){
 SetConsoleCP(65001);
 SetConsoleOutputCP(65001);
 
-int idade;
-int ehEstudante;
+int n1, n2, n3;
+float media;
+float freq;
 
-printf("Qual sua idade?");
-scanf("%d", &idade);
-printf("\nVocê é estudante (0 - não | 1 - sim);");
-scanf("%d", &ehEstudante);
+printf("digite a nota n1: ");
+scanf("%d", &n1);
 
-if((idade >= 60) && (ehEstudante == 1)){
-    printf("parabéns, você tem direito à desconto!");
+printf("\nDigite a nota n2: ");
+scanf("%d", &n2);
+
+printf("\nDigite a nota n3: ");
+scanf("%d", &n3);
+
+media = (n1 + n2 + n3) / 3;
+
+printf("digite a frequência ( em números apenas): ");
+scanf("%f", &freq);
+
+if(media >= 7 && freq >= 75){
+    printf("\n Aprovado com sucesso!");
 }else{
-    printf("infelizmente você nâo terá desconto!");
+    printf("\nReprovado!");
 }
+
 
 return 0;
 
