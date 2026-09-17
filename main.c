@@ -1,25 +1,34 @@
 #include<stdio.h>
-#include<windows.h>
-
+#include<Windows.h>
 
 int main(){
+
 
 SetConsoleCP(65001);
 SetConsoleOutputCP(65001);
 
 
-int nota;
+float n1, n2, n3, media;
 
-printf("digite a nota do aluno: ");
-scanf("%d", &nota);
+printf("Digite a nota 1: ");
+scanf("%f", &n1);
 
-if(nota >= 7){
+printf("Digite a nota 2: ");
+scanf("%f", &n2);
+
+printf("Digite a nota 3: ");
+scanf("%f", &n3);
+
+media = (n1 + n2 + n3) / 3;
+
+if(media >= 7){
     printf("Aprovado!");
-}else if(nota >= 5){
-    printf("Recuperação!");
+}else if(media >= 5){
+    printf("recuperação!");
 }else{
-    printf("Reprovado!");
+    printf("reprovado!");
 }
+
 
 return 0;
 
