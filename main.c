@@ -7,38 +7,40 @@ int main(){
 SetConsoleCP(65001);
 SetConsoleOutputCP(65001);
 
-int opcao;
+int mes;
 
-printf("--- SISTEMA DE PEDÁGIO ---\n");
-printf("1 - Moto\n");
-printf("2 - Carro de passeio\n");
-printf("3 - caminhão\n ");
-printf("4 - ônibus");
-scanf("%d", &opcao);
+printf("digite um valor de 1 a 12: ");
+scanf("%d", &mes);
 
-    switch(opcao)
-    {
-        case 1:
-            printf("Categoria: Moto | Tarifa: R$5,00\n");
-            break;
-        
-        case 2:
-            printf("categoria: Carro de passeio | Tarifa; R$10,00\n");
-            break;
+switch(mes){
 
-        case 3:
-            printf("categoria: caminhão | tarifa: R$25,00\n");
-            break;
+    case 12:
+    case 1:
+    case 2:
+        printf("verao");
+        break;
 
-        case 4:
-            printf("categoria: ônibus | tarifa: R$30,00");
-            break;
+    case 3:
+    case 4:
+    case 5:
+        printf("outono");
+        break;
 
-        default:
-            printf(" Erro: categoria nâo encontrada no sistema!\n");
-            break;
+    case 6:
+    case 7:
+    case 8:
+        printf("inverno");
+        break;
 
-    }
+    case 9:
+    case 10:
+    case 11:
+        printf("primavera");
+
+    default:
+        printf("valor inválido");
+
+}
 
 
 return 0;
