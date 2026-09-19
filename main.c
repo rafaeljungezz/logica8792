@@ -7,22 +7,21 @@ int main(){
 SetConsoleCP(65001);
 SetConsoleOutputCP(65001);
 
-int n;
-printf("digite um numero: ");
-scanf("%d", &n);
+int ano;
+printf("digite o ano: ");
+scanf("%d", &ano);
 
-if(n % 3 == 0 && n % 5 == 0){
-    printf("multiplo de 3 e 5\n");
-}else if(n % 3== 0){
-    printf("multiplo de 3\n");
-}else if(n % 5 == 0){
-    printf("multilpo de 5\n");
+if((ano % 4 == 0 && ano % 100 != 0) || ano % 400 == 0){
+    printf("ano: %d\n", ano);
+    printf("ano bissexto\n");
 }else{
-    printf("não é multiplo de 3 nem de 5\n");
+    printf("ano: %d", ano);
+    printf(" ano NÃO bissexto");
 }
 
-
-
+// != significa "diferente"
+//&& significa "e"
+// "||" significa "ou"
 
 return 0;
 
