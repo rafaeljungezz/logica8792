@@ -7,21 +7,27 @@ int main(){
 SetConsoleCP(65001);
 SetConsoleOutputCP(65001);
 
-int ano;
-printf("digite o ano: ");
-scanf("%d", &ano);
+float altura, peso, imc;
 
-if((ano % 4 == 0 && ano % 100 != 0) || ano % 400 == 0){
-    printf("ano: %d\n", ano);
-    printf("ano bissexto\n");
+printf("digite o peso (kg): ");
+scanf("%f", &peso);
+
+printf("digite a altura (m): ");
+scanf("%f", &altura);
+
+imc = peso / (altura * altura);
+
+if(imc < 18.5){
+    printf("classificaçao: abaixo do peso\n");
+}else if(imc < 25){
+    printf("classificaçao: peso normal\n");
+}else if(imc < 30){
+    printf("classificaçao: acima do peso\n");
 }else{
-    printf("ano: %d", ano);
-    printf(" ano NÃO bissexto");
+    printf("classificaçao: obesidade\n");
 }
 
-// != significa "diferente"
-//&& significa "e"
-// "||" significa "ou"
+
 
 return 0;
 
