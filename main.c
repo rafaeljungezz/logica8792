@@ -1,18 +1,20 @@
 #include<stdio.h>
 #include<Windows.h>
 
+void dobrar(int *x){
+    *x = *x * 2;
+}
+
 int main(){
+
+int numero = 10;
+dobrar(&numero);
+printf("número depois da função: %d\n", numero);
 
 
 SetConsoleCP(65001);
 SetConsoleOutputCP(65001);
 
-int x = 10;
-int *p = &x;
-
-printf("valor de x: %d\n", x);
-printf("endereço de x: %p\n", &x);
-printf("valor via ponteiro: %d\n", &p);
 
 
 return 0;
