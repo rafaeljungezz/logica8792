@@ -7,11 +7,11 @@ int main(){
 SetConsoleCP(65001);
 SetConsoleOutputCP(65001);
 
-int idades[3] = {15, 45, 67};
+for(int i = 0; i <=10; i = i + 2){
+    printf("%d\n", i);
+}
 
-printf("%s %d %s", "Rafael tem, ", idades[0], "anos!\n");
-printf("%s %d %s", "Flavio tem, ", idades[2], "anos!\n");
-printf("%s %d %s", "jose tem, ", idades[1], "anos!\n");
+
 
 return 0;
 
