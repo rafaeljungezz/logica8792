@@ -1,9 +1,8 @@
 #include<stdio.h>
 #include<Windows.h>
 
-void saudar(){
-    printf("olá mundo!\n");
-    printf("Meu nome é Rafael");
+void saudar(const char *nome){
+    printf("olá %s\n", nome);
 }
 
 int main(){
@@ -11,7 +10,9 @@ int main(){
 SetConsoleCP(65001);
 SetConsoleOutputCP(65001);
 
-saudar();
+saudar("Rafael");
+saudar("Junges");
+saudar("Trisch");
 
 
 
