@@ -2,11 +2,14 @@
 #include<Windows.h>
 #include<math.h>
     
-void tabuada(int n){
-    printf("tabuada do %\n", n);
+int tabuada(int n){
+    int resultado;
+    printf("tabuada do %d:\n", n);
     for(int i = 1; i <= 10; i++){
-        printf(" %d * %d = %d\n", n, i, n * i);
+        resultado = n * i;
+        printf("%d x %d = %d\n", n, i, resultado);
     }
+    return resultado;
 }
 
 
@@ -17,7 +20,8 @@ int main(){
 SetConsoleCP(65001);
 SetConsoleOutputCP(65001);
 
-tabuada(12);
+int ultimo = tabuada(14);
+printf("ultimo valor da tabuada: %d\n", ultimo);
 
 
 }
