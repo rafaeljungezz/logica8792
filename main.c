@@ -1,21 +1,21 @@
 #include<stdio.h>
 #include<Windows.h>
-
+#include<math.h>
     
 int main(){
 
 SetConsoleCP(65001);
 SetConsoleOutputCP(65001);
 
-char nomes[3][30] ={
-    "Rafael",
-    "Matheus",
-    "Otávio"
-};
+int numero;
+printf("digite um numero: ");
+scanf("%d", &numero);
 
-for(int i = 0; i < 3; i++){
-    printf("%s\n", nomes[i]);
-}
+int quadrado = (int)pow(numero, 2);
+int cubo = (int)pow(numero, 3);
+printf("quadrado de %d = %d\n", numero, quadrado);
+printf("cubo de %d = %d", numero, cubo);
+
 
 return 0;
 
