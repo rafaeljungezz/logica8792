@@ -9,25 +9,21 @@ int main(){
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);
 
-   int i = 1;
+   int n, soma = 0;
 
-   while(i <= 50){
-    if(i % 2 == 0){
-        printf("%d\n", i);
-    }
-    i++;
-   
+        printf("digite um numero: ");
+        scanf("%d", &n);
 
-   ---------------------------------------------------------------
 
-    for(int i = 0; i <= 50; i +=2){
-        printf("%dn\n", i);
-
+    for(int i = 1; i <= n; i++){
+        soma += i;
     }
 
-   }
 
+    printf(" o resultado da soma é: %d\n", soma);
 
-    return 0;
     
+    return 0;
+
+
    }
