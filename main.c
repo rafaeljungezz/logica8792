@@ -9,16 +9,14 @@ int main(){
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);
 
-int n;
+    int i = 1;
 
-printf("digite um número: ");
-scanf("%d", &n);
+    while(i <= 5){
+        printf("%d\n ", i);
+        i++;
+    }
 
-if(n % 2 == 0){
-    printf("\nPar");
-}else{
-    printf("\nímpar");
-}
+()
 
-    return 0;
+
 }
