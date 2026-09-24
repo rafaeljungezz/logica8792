@@ -2,13 +2,11 @@
 #include<Windows.h>
 #include<math.h>
     
-void verificarEhParImpar(int n){
-    if(n % 2 == 0 ){
-    
-    printf("%d é par!\n", n);
-    }else{
-        printf("%d é ímpar!\n", n);
+void linha(int tamanho){
+    for(int i = 0; i < tamanho; i++){
+        printf(":)");
     }
+    printf("\n");
 }
 
 int main(){
@@ -16,11 +14,7 @@ int main(){
 SetConsoleCP(65001);
 SetConsoleOutputCP(65001);
 
-int numero;
-
-printf("digite um numero: ");
-scanf("%d", &numero);
-verificarEhParImpar(numero);
+linha(2000);
 
 
 }
