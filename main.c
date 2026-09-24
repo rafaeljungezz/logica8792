@@ -2,17 +2,14 @@
 #include<Windows.h>
 #include<math.h>
     
-int tabuada(int n){
-    int resultado;
-        printf("tabuada do %d:\n", n);
-            for(int i = 1; i <= 10; i++){
-            printf("%d x %d = %d\n", n, i, n * i);
+void verificarEhParImpar(int n){
+    if(n % 2 == 0 ){
+    
+    printf("%d é par!\n", n);
+    }else{
+        printf("%d é ímpar!\n", n);
     }
-         return resultado;
 }
-
-
-
 
 int main(){
 
@@ -21,8 +18,9 @@ SetConsoleOutputCP(65001);
 
 int numero;
 
-    printf("digite um numero para ver a tabuada: ");
-    scanf("%d", &numero);
-    tabuada(numero);
+printf("digite um numero: ");
+scanf("%d", &numero);
+verificarEhParImpar(numero);
+
 
 }
