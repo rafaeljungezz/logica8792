@@ -9,21 +9,20 @@ int main(){
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);
 
-   int n, soma = 0;
+   int n;
 
-        printf("digite um numero: ");
-        scanf("%d", &n);
+    printf("digite um número: ");
+    scanf("%d", &n);
 
+    for(int i = 1; i <= 10; i++){
 
-    for(int i = 1; i <= n; i++){
-        soma += i;
+        printf(" %d * %d = %d\n", n, i, n * i);
+
     }
-
-
-    printf(" o resultado da soma é: %d\n", soma);
-
     
-    return 0;
+    
 
+
+    return 0;
 
    }
