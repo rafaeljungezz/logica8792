@@ -9,17 +9,29 @@ int main(){
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);
 
-   int numero, contador = 0;
+   int n, primo = 1;
 
-   printf("digites os numeros (0 para parar): \n");
-   scanf("%d", &numero);
+   printf("digite um numero: ");
+   scanf("%d", &n);
 
-   while(numero != 0){
-        contador++;
-        scanf("%d", &numero);
+   if(n < 2){
+    primo = 0;
+   }else{
+        for(int i = 2; i <= n / 2; i++){
+            if(n % i== 0){
+                primo = 0;
+                break;
+            }
+        }
    }
+    if(primo){
+        printf("%d é primo\n", n);
+    }else{
+        printf("%d não é primo\n", n);
+    }
 
-    printf("quantidade de numerosa digitados: %d\n", contador);
+
+
 
     return 0;
 
