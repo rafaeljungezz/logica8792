@@ -10,21 +10,17 @@ int main(){
     SetConsoleOutputCP(65001);
 
    int n;
-   int resultado;
+   float valor, soma = 0;
 
+    printf("quantos numeros deseja digitar? ");
+    scanf("%d", &n);
 
-    printf("digite um número: ");
-    resultado = scanf("%d", &n);
-
-    if(resultado != 1){
-        printf("entrada inválida!por favor, digite apenas numeros! ");
-        return 1;//código para execução
+    for(int i = 0; i< n; i++){
+        printf("digite o numero %d: ", i + 1);
+        scanf("%f", &valor);
+        soma += valor;
     }
-
-    for(int i = 1; i <= 10; i++){
-        printf("%d * %d = %d\n", n, i, n * i);
-    }
-      
+    printf("Média: %.2f\n", soma / n);
 
 
     return 0;
