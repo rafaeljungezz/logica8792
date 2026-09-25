@@ -18,7 +18,7 @@ int main(){
 
     if(resultado != 1){
         printf("entrada inválida!por favor, digite apenas numeros! ");
-        return 1;
+        return 1;//código para execução
     }
 
     for(int i = 1; i <= 10; i++){
@@ -30,6 +30,3 @@ int main(){
     return 0;
 
    }
-
-
-//teste
