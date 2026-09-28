@@ -8,14 +8,14 @@ int main(){
 
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);
-    
 
-        for(int i = 1; i <= 10; i++){
-            for(int r = 1; r <= 10; r++){
-                printf("%d * %d = %d\n", i, r, i * r);
+
+        for(int i = 1; i <= 3; i++){
+            for(int r = 1; r <= 3; r++){
+                printf("for externo e for interno: %d %d\n", i, r);
             }
-            printf("\n");
         }
+                
 
   
         return 0;
