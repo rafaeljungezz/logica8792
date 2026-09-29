@@ -11,13 +11,16 @@ int main(){
 
     int n;
 
-        printf("digite o tamanho do trialngulo: ");
+        printf("digite o tamanho da pirâmide: ");
         scanf("%d", &n);
 
-            for(int i = n; i >= 1; i--){
-                for(int r = 1; r <= i; r++){
-                    printf("r ");
+            for(int i = 1; i <= n; i++){
+                for(int r = i; r <= i; r++){
+                    printf(" ");
 
+                }
+                for(int k = 1; k <= ( 2 * i -1); k++){
+                    printf("*");
                 }
                 printf("\n");
             }
