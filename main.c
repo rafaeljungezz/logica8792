@@ -11,18 +11,15 @@ int main(){
 
     int n;
 
-        printf("de que tamanho vai ser o quadrado: ");
+        printf("digite o tamanho do trialngulo: ");
         scanf("%d", &n);
 
-
-    for(int i = 1; i <= n; i++){
-        for(int r = 1; r <=n; r++){
-            printf("* ");
-        }
-        printf("\n");
-    }
-
-
+            for(int i = 1; i <= n; i++){
+                for(int r = 1; r <= i; r++){
+                    printf("r ");
+                }
+                printf("\n");
+            }
 
         return 0;
 
