@@ -10,24 +10,18 @@ int main(){
     SetConsoleOutputCP(65001);
 
    
-       int n, contador = 0;
+       int n = 8; //declara a variavel n = 8
 
-        printf("digite o limite N: ");
-        scanf("%d", &n);
-
-        for(int r = 2; r <= n; r++){
-            int primo = 1;
-            for(int i = 2; i < r; i++){
-                if(r % i == 0){
-                    primo = 0;
-                    break;
+        for(int i = 0; i < n; i++){  //para: i vale 0, enquanto i for menor que n(8), i aumenta em 1
+            for(int j = 0; j < n; j++){ //para: j vale 0, enquanto j for menor que n(8), j aumenta em 1
+                if((i + j) % 2 == 0 ){ // Se: (i mais j) dividido por 2 der resto zero:
+                    printf("[ ]"); // imprima [ ]
+                }else{ // se não:
+                    printf("[#]"); // imprima [#]
                 }
             }
-            if(primo){
-                contador++;
-            }
+            printf("\n"); // quebra de linha
         }
-        printf("quantidades de primos entre 1 e %d: %d\n", n, contador);
 
         return 0;
 
