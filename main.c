@@ -9,22 +9,18 @@ int main(){
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);
 
-    int limite; // declara a variavel limite
+    int v[10]; //declara a variavel v[10], é como se fossem gavetas, armazenam o numero digitado pelo usuario
 
-        printf("digite o limite: "); //pede para o usuario digitar um numero
-        scanf("%d", &limite); // lê a resposta e armazena na variavel limite
-
-            for(int n = 1; n <= limite; n++){ //para: numero inteiro igual a um; enquanto numero(1) for menor ou igual limite; numero(1) aumenta.
-                int soma = 0; // declara a variavel soma começando em zero
-                for(int i = 1; i < n; i++){// oara: inteiro i igual a 1; enquanto i(1) for menor que n, i aumenta.
-                    if(n % i == 0){ // se (n divido por i) der resto zero:
-                        soma += i; //soma = soma mais i
-                    }
-                }
-                if(soma == n & n != 0){ // se (soma for igual a n for diferente de zero):
-                    printf("%d é um número perfeito\n", n); // imprima a resposta.
-                }
-            }
+        for(int i = 0; i < 10;i++){ // para: inteiro i igual a 0; enquanto i for menor que zero; i aumenta.
+            printf("digite o valor %d:", i + 1); //pede para o usuario para digitar um valor, até "chegar na ultma gaveta"( o maximo é 10 )
+            scanf("%d", &v[i]); // lê os dados e armazena em v[i]
+        }
+        printf("Vetor invertido: \n"); // mensagem que mostra o numero invertido
+        for(int i = 9; i >= 0; i--){ // para: inteiro i igual a 9; enquanto i for maior ou igual a zero; i diminuirá.
+            printf("%d", v[i]); // imprime o valor, colocando os numeros em v[i]
+        }
+        printf("\n"); // quebra de limha
+        
        
         return 0;
 
