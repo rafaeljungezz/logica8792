@@ -9,20 +9,23 @@ int main(){
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);
 
-   
-       int n = 8; //declara a variavel n = 8
+    int limite; // declara a variavel limite
 
-        for(int i = 0; i < n; i++){  //para: i vale 0, enquanto i for menor que n(8), i aumenta em 1
-            for(int j = 0; j < n; j++){ //para: j vale 0, enquanto j for menor que n(8), j aumenta em 1
-                if((i + j) % 2 == 0 ){ // Se: (i mais j) dividido por 2 der resto zero:
-                    printf("[ ]"); // imprima [ ]
-                }else{ // se não:
-                    printf("[#]"); // imprima [#]
+        printf("digite o limite: "); //pede para o usuario digitar um numero
+        scanf("%d", &limite); // lê a resposta e armazena na variavel limite
+
+            for(int n = 1; n <= limite; n++){ //para: numero inteiro igual a um; enquanto numero(1) for menor ou igual limite; numero(1) aumenta.
+                int soma = 0; // declara a variavel soma começando em zero
+                for(int i = 1; i < n; i++){// oara: inteiro i igual a 1; enquanto i(1) for menor que n, i aumenta.
+                    if(n % i == 0){ // se (n divido por i) der resto zero:
+                        soma += i; //soma = soma mais i
+                    }
+                }
+                if(soma == n & n != 0){ // se (soma for igual a n for diferente de zero):
+                    printf("%d é um número perfeito\n", n); // imprima a resposta.
                 }
             }
-            printf("\n"); // quebra de linha
-        }
-
+       
         return 0;
 
     }
