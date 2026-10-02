@@ -9,22 +9,26 @@ int main(){
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);
 
-   int n; // declarando a variavel
+    int n; // declara a variavel n
 
-    printf("digite o tamanho do vetor: "); //pedindo para o usuario digitar o tamanho do vetor
-    scanf("%d", &n); // le a resposta e guarda na variavel n
+        printf("digite o tamanho do vetor: ");   //pede para o usuario digitar o tamanho do vetor
+        scanf("%d", &n);     // lê a resposta e armazena na variavel n
 
-        int v[n]; // declara o vetor com o inteiro para armazenar as respostas dos usuarios
-        int soma = 0; //  declara a variavel soma começando em zero
+    int v[n];    //declaramos a variavel v[o numero digitado pelo usuario]                                 //int numrto [2]  --> significa que vão ter dois numeros
 
-        for(int i = 0; i < n; i++){ //para: inteiro i igual a zero; enquanto i for menor que n; i aumenta
-            printf("digite o valor %d:", i + 1); // pede para o usuario digitar um valor
-            scanf("%d", &v[i]); // lê a resposta e armazena nas variaveis v[i]
-            soma += v[i]; // soma é igual a soma mais v[i] ( numero adicionado ao vetor )
+        for(int i = 0; i < n; i++){     // cada vez que o inteiro i for menor que o numero do usuario, i aumenta
+            printf("digite o valor %d: ", i + 1);   // pede para o usuario digitar um valor, a mensagem se repete pelo numero de vezes que o usuario escolheu no vetor.
+            scanf("%d", &v[i]);     // lê o dado que usuario digitou e armazena na variavel v[i]
         }
-        printf("soma: %d\n", soma); // imprime a reposta da soma
-        printf("Média: %.2f\n", (float)soma/n); // imprime a  resposta da média, com um float dizendo para ter apenas duas casas decimais ( soma divido por n )
+    int maior = v[0], menor = v[0];     // declara a variavel maior =v[0] e menor = v[0]
 
+        for(int i = 1; i < n; i++){     //  para: percorre o vetor a partir do segundo elemento (índice 1)
+            if(v[i] > maior) maior = v[i];  // se encontrar um valor maior que "maior", atualiza "maior"
+            if(v[i] < menor) menor = v[i];  // se encontrar um valor menor que "menor", atualiza "menor"
+        }
+
+            printf("maior: %d\n", maior);   //mostra o maior valor encontrado
+            printf("Menor: %d\n", menor);   // mostra o menor valor encontrado
 
 
         return 0;
