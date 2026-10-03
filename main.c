@@ -16,20 +16,21 @@ int main(){
 
     int v[n];    //declaramos a variavel v[o numero digitado pelo usuario                                 //int numrto [2]  --> significa que vão ter dois numeros
 
-    int pares = 0, impares = 0;
+        for(int i = 0; i < n; i++){
+            printf("digite o valor %d: ", i + 1);
+            scanf("%d", &v[i]);
+                if(v[i] < 0){
+                    v[i] = 0;
+                }   
+        }
+        printf("vetor ajustado: \n");
 
             for(int i = 0; i < n; i++){
-                printf("digite o valor %d: ", i + 1);
-                scanf("%d", &v[i]);
-
-                if(v[i] % 2 == 0){
-                    pares++;
-                }else{
-                    impares++;
-                }
+                printf("%d", v[i]);
             }
-            printf("pares: %d\n", pares);
-            printf("impares: %d\n", impares);
+            printf("\n");
+
+                
 
 
             return 0;
