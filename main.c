@@ -3,21 +3,32 @@
 #include<math.h>
 #include<string.h>
 
-char* saudaçao(){
-    return "olá, seja bem-vindo(a)!";
-}
-
-
 
 int main(){
 
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);
 
-    printf("%s\n", saudaçao());
+    int voto;
 
+        printf("digite um numero para votar: ");
+        scanf("%d", &voto);
 
-
+        if(voto == 10){
+            printf("Manoel ganhou a votação!");
+        }else if(voto == 20){
+            printf("Carla ganhou a votação!");
+        }else if(voto == 30){
+            printf("Bianca ganhou a votação!");
+        }else if(voto == 40){
+            printf("Henrique ganhou a votação!");
+        }else if( voto == 50){
+            printf("Bruno ganhou a votação! ");
+        }else{
+            printf("inválido!");
+        }
+        
+        
 
                return 0;
     }
