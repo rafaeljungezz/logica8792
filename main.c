@@ -9,34 +9,29 @@ int main(){
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);
 
-    int n; 
+    int n;
 
-        printf("digite o tamanho dos vetores: ");
+        printf("digite o tamanho do vetor: ");
         scanf("%d", &n);
 
-    int a[n], b[n], soma[n];
-
-        printf("digite os valores do Vetor A:\n");
+    float v[n], soma = 0, media, somaDesvios = 0;
 
         for(int i = 0; i < n; i++){
-            scanf("%d", &a[i]);
+            printf("digite o valor %d:", i + 1);
+            scanf("%f", &v[i]);
+            soma += v[i];
         }
-        printf("digite os valores do vetor B:\n");
+        media = soma / n;
 
-        for(int i = 0; i < n;i++){
-            scanf("%d", &b[i]);
-        }
-        
         for(int i = 0; i < n; i++){
-            soma[i] = a[i] + b[i];
+            somaDesvios += (v[i] - media) * (v[i] - media);
         }
+    
+    float desvioPadrao = sqrt(somaDesvios / n);// desvio padrao é uma raiz quadrada da soma dos desvios 
+    
 
-        printf("vetor soma: \n");
-
-        for(int i = 0; i < n; i ++){
-            printf("%d\n", soma[i]);
-        }
-        printf("\n");
+        printf("Média: %.2f\n", media);
+        printf("desvio padrao: %.2f\n", desvioPadrao);
 
                return 0;
     }
