@@ -11,27 +11,30 @@ int main(){
 
     int n;
 
-        printf("digite o tamanho do vetor: ");
+        printf("quantos nomes deseja digitar? ");
         scanf("%d", &n);
 
-    float v[n], soma = 0, media, somaDesvios = 0;
+    char nomes[n][50];
 
         for(int i = 0; i < n; i++){
-            printf("digite o valor %d:", i + 1);
-            scanf("%f", &v[i]);
-            soma += v[i];
+            printf("digite o nome %d: ", i + 1);
+            scanf("%s", nomes[i]);
         }
-        media = soma / n;
-
+        for(int i = 0; i < n - 1; i++){
+            for(int r = 0; r < n - 1; r++){
+                if(strcmp(nomes[r], nomes[r + 1]) > 0){
+                    char temp[50];
+                    strcpy(temp, nomes[r]);
+                    strcpy(nomes[r], nomes[r + 1]);
+                    strcpy(nomes[r + 1], temp);
+                }
+            }
+        }
+        printf("nomes em ordem alfabética: \n");
         for(int i = 0; i < n; i++){
-            somaDesvios += (v[i] - media) * (v[i] - media);
+            printf("%s\n", nomes[i]);
         }
-    
-    float desvioPadrao = sqrt(somaDesvios / n);// desvio padrao é uma raiz quadrada da soma dos desvios 
-    
 
-        printf("Média: %.2f\n", media);
-        printf("desvio padrao: %.2f\n", desvioPadrao);
-
+   
                return 0;
     }
