@@ -22,7 +22,7 @@ int main(){
     struct pessoa r1;
 
     printf("\nqual seu nome?\n ");
-    scanf("%s", &r1.nome );
+    fgets(r1.nome, sizeof(r1.nome), stdin);
 
     printf("\nqual é a sua idade?\n");
     scanf("%d", &r1.idade);
