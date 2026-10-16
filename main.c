@@ -16,25 +16,36 @@ int main(){
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);
 
-    printf("--- Bem-vindo a academia PWR ---");
-    printf("\n");
+    int n;
 
-    struct pessoa r1;
+        printf("quantas pessoas deseja cadastrar? ");
+        scanf("%d", &n);
 
-    printf("\nqual seu nome?\n ");
-    fgets(r1.nome, sizeof(r1.nome), stdin);
+        getchar(); // consome o '\n' deixado pelo scanf
 
-    printf("\nqual é a sua idade?\n");
-    scanf("%d", &r1.idade);
+    struct pessoa r1[n];
 
-    printf("\nqual a sua altura?\n ");
-    scanf("%f", &r1.altura);
+        for(int i = 0; i < n; i++){
+            printf("\nPessoa %d\n, ", i + 1);
+            printf("Nome Completo: ");
+            fgets(r1[i].nome, sizeof(r1[i].nome), stdin);
 
-    printf("\nqual seu peso?\n ");
-    scanf("%f", &r1.peso);
+            printf("idade: ");
+            scanf("%d", &r1[i].idade);
 
-    printf("--- Seus dados: ---\n");
-    printf("nome: %s | idade: %d | altura: %.2f | peso: %.2f\n", r1.nome, r1.idade, r1.altura, r1.peso);
-    
+            printf("altura: ");
+            scanf("%f", &r1[i].altura);
+
+            printf("peso: ");
+            scanf("%f", &r1[i].peso);
+            
+            getchar();
+        }
+        printf("\n --- lista de pessoas ---\n");
+
+            for(int i = 0; i < n; i++){
+                printf("\n nome: %s | idade: %d | altura: %.2f | peso: %.2f\n", r1[i].nome, r1[i].idade, r1[i].altura, r1[i].peso);
+            }
+
                return 0;
     }
