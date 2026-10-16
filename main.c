@@ -7,6 +7,7 @@
         char nome[50];
         int idade;
         float altura;
+        float peso;
     };
    
 
@@ -15,14 +16,25 @@ int main(){
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);
 
-   struct pessoa r1 = {"rafael", 15, 1.88};
-   struct pessoa r2 = {"pedro", 14, 1.80};
-   struct pessoa r3 = {"julia", 16, 1.65};
+    printf("--- Bem-vindo a academia PWR ---");
+    printf("\n");
 
-    printf("Nome: %s | idade: %d | altura: %.2f\n", r1.nome, r1.idade, r1.altura);
-    printf("Nome: %s | idade: %d | altura: %.2f\n", r2.nome, r2.idade, r2.altura);
-    printf("Nome: %s | idade: %d | altura: %.2f\n", r3.nome, r3.idade, r3.altura);
-   
-   
+    struct pessoa r1;
+
+    printf("\nqual seu nome?\n ");
+    scanf("%s", &r1.nome );
+
+    printf("\nqual é a sua idade?\n");
+    scanf("%d", &r1.idade);
+
+    printf("\nqual a sua altura?\n ");
+    scanf("%f", &r1.altura);
+
+    printf("\nqual seu peso?\n ");
+    scanf("%f", &r1.peso);
+
+    printf("--- Seus dados: ---\n");
+    printf("nome: %s | idade: %d | altura: %.2f | peso: %.2f\n", r1.nome, r1.idade, r1.altura, r1.peso);
+    
                return 0;
     }
