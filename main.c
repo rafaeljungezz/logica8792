@@ -10,18 +10,22 @@ int main(){
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);
 
-    int n, soma = 0;
-    
-        printf("digite N: ");
+
+    int n;
+
+        printf(" digite um valor: ");
         scanf("%d", &n);
 
-        for(int i = 1; i <= n; i++){
-            soma += i;
-            soma -= 1;
-            int result = soma;
-                printf("\nresultado da soma: %d + %d = %d\n", soma, i, soma + i);
+        if(n <= 0){
+            printf("digite um numero valido!\n");
+        }else{
+   
+        for(int i = 1; i <= 10; i++){
+            printf("%d x %d = %d\n", i, n, i * n);
         }
-        
+
+        }
+    
 
                return 0;
     }
