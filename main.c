@@ -10,11 +10,19 @@ int main(){
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);
 
-    int portaAberta = 0;
+    int idade;
+    int temIngresso;
 
-    
-        if(!portaAberta){ // NAO PORTA ABERTA, tirando o valor da variavel
-            printf("A porta está fechada!\n");
+        printf("digite sua idade:\n");
+        scanf("%d", &idade);
+
+        printf("possui ingresso?( 1 - sim / 0 - não)\n");
+        scanf("%d", &temIngresso);
+
+        if(idade >= 18 && temIngresso){
+            printf("entrada permitida!\n");
+        }else{
+            printf("entrada não permitida!\n");
         }
 
                return 0;
