@@ -11,21 +11,9 @@ int main(){
     SetConsoleOutputCP(65001);
 
 
-    int n;
-
-        printf(" digite um valor: ");
-        scanf("%d", &n);
-
-        if(n <= 0){
-            printf("digite um numero valido!\n");
-        }else{
-   
-        for(int i = 1; i <= 10; i++){
-            printf("%d x %d = %d\n", i, n, i * n);
-        }
-
-        }
-    
+    for(int i = 0; i < 5; i++){
+        printf("%d - programar\n", i + 1);
+    }
 
                return 0;
     }
