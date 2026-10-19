@@ -10,10 +10,12 @@ int main(){
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);
 
+    int portaAberta = 0;
 
-    for(int i = 0; i < 5; i++){
-        printf("%d - programar\n", i + 1);
-    }
+    
+        if(!portaAberta){ // NAO PORTA ABERTA, tirando o valor da variavel
+            printf("A porta está fechada!\n");
+        }
 
                return 0;
     }
