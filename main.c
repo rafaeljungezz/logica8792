@@ -10,14 +10,24 @@ int main(){
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);
 
-    int n = 1;
-    int soma = 0;
+    int n;
+    int pares = 0;
 
-        while(n < 100){
-            n++;
-            soma++;
-            printf("%d + 1 = %d\n", soma, n);
+        printf("digite o numero:\n");
+            scanf("%d", &n);
+        
+
+        while(n != 0){
+
+            if(n % 2 == 0){
+                    pares++;
+            }
+
+            printf("digite um numero ( e 0 para encerrar ):");
+            scanf("%d", &n);
+
         }
+        printf("a soma dos pares é: %d", pares);
     
                return 0;
     }
