@@ -10,24 +10,20 @@ int main(){
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);
 
-    int n;
-    int pares = 0;
+    int senha = 2011;
+    int tentativas;
 
-        printf("digite o numero:\n");
-            scanf("%d", &n);
-        
+        printf("digite a senha: ");
+        scanf("%d", &tentativas);
 
-        while(n != 0){
+    while( tentativas != senha){
 
-            if(n % 2 == 0){
-                    pares++;
-            }
-
-            printf("digite um numero ( e 0 para encerrar ):");
-            scanf("%d", &n);
-
+            printf("senha inválida!! tente novamente:");
+            scanf("%d", &tentativas);
         }
-        printf("a soma dos pares é: %d", pares);
+        printf("acesso aceito!");
+
+
     
                return 0;
     }
