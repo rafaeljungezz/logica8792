@@ -10,19 +10,14 @@ int main(){
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);
 
-    int n;
+    int n = 1;
+    int soma = 0;
 
-        printf("digite um numero:\n");
-        scanf("%d", &n);
-
-        if(n <= 0){
-            printf("digite um numero valido!");
+        while(n < 100){
+            n++;
+            soma++;
+            printf("%d + 1 = %d\n", soma, n);
         }
-
-        while(n >= 0){
-            printf("%d\n", n);
-            n--;
-        }
-        
+    
                return 0;
     }
