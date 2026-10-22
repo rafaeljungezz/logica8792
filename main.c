@@ -10,19 +10,16 @@ int main(){
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);
 
-    int n;
+    float nota;
 
         do{
 
-             printf("Digite um numero ( não negativo ):");
-            scanf("%d", &n);
+            printf("digite uma nota ( 0 a 10 ):");
+            scanf("%f", &nota);
 
-        }while(n < 0);
-                
-        printf("você digitou: %d\n", n);
-        
+        }while(nota < 0 || nota > 10);
 
-
+        printf("nota válida: %.1f\n", nota);
     
                return 0;
     }
