@@ -10,18 +10,19 @@ int main(){
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);
 
-    int r;
+    int n; 
+    int soma = 0;
 
         do{
 
-            printf("Executando o programa..\n");
-            printf("deseja continuar? ( 1 - Sim / 0 - Não):");
-            scanf("%d", &r);
+            printf("digite um numero ( 0 para parar ):");
+            scanf("%d", &n);
+            soma += n;
 
-        }while(r == 1);
+        }while(n != 0);
 
-            printf("Programa Encerrado!!\n"); 
+            printf("soma: %d\n", soma);
 
-            
+
                return 0;
     }
