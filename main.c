@@ -10,18 +10,17 @@ int main(){
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);
 
-    int senha = 2011;
-    int tentativas;
+    int n;
 
-        printf("digite a senha: ");
-        scanf("%d", &tentativas);
+        do{
 
-    while( tentativas != senha){
+             printf("Digite um numero ( não negativo ):");
+            scanf("%d", &n);
 
-            printf("senha inválida!! tente novamente:");
-            scanf("%d", &tentativas);
-        }
-        printf("acesso aceito!");
+        }while(n < 0);
+                
+        printf("você digitou: %d\n", n);
+        
 
 
     
