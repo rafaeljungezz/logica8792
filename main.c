@@ -12,25 +12,34 @@ int main(){
 
     int n;
 
-        printf("digite um numero de 1 a 3: ");
+        printf("digite um numero de 1 a 12:");
         scanf("%d", &n);
 
         switch (n){
 
 
         case 1:
+        case 3:
+        case 5:
+        case 7:
+        case 8:
+        case 10:
+        case 12:
 
-            printf("você digitou o numero %d", n);
+            printf("o mes %d tem 31 dias!\n", n);
             break;
 
         case 2:
 
-            printf("você digitou o numero %d", n);
+            printf("o mes %d tem 28 dias\n", n);
             break;
 
-        case 3:
+        case 4:
+        case 6:
+        case 9:
+        case 11:
 
-            printf("você digitou o numero %d", n);
+            printf("o mes %d tem 30 dias:\n", n);
             break;
 
         default:
@@ -42,6 +51,6 @@ int main(){
         }
             
 
-
+    //um switch digitar de 1 a 12 
                return 0;
     }
