@@ -10,27 +10,36 @@ int main(){
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);
 
-    int opcao;
+    int n;
 
-        do{
+        printf("digite um numero de 1 a 3: ");
+        scanf("%d", &n);
 
-            printf("\b--- MENU ---\n");
-            printf("1 - dizer olá\n");
-            printf("2 - dizer tchau\n");
-            printf("0 - sair\n");
-            printf("escolha: ");
-            scanf("%d", &opcao);
+        switch (n){
 
-                if(opcao == 1){
-                    printf("\nolá\n");
-                }else if(opcao == 2){
-                    printf("\ntchau!\n");
-                }else if(opcao == 0){
-                    printf("\nopcao inválida!\n");
-                }
 
-        }while(opcao != 0);
-            printf("até mais!\n");
+        case 1:
+
+            printf("você digitou o numero %d", n);
+            break;
+
+        case 2:
+
+            printf("você digitou o numero %d", n);
+            break;
+
+        case 3:
+
+            printf("você digitou o numero %d", n);
+            break;
+
+        default:
+
+            printf("numero invalido!!\n");
+            break;
+
+
+        }
             
 
 
