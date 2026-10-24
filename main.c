@@ -3,54 +3,60 @@
 #include<math.h>
 #include<string.h>
 
- 
+
 
 int main(){
 
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);
 
-    int n;
+    const int dias = 7;
+    float temp[dias];
+    float soma = 0, media;
+    float maior, menor;
+    int diaMaior = 1, diaMenor = 1;
+    int acimaMedia = 0;
 
-        printf("digite um numero de 1 a 12:");
-        scanf("%d", &n);
-
-        switch (n){
-
-
-        case 1:
-        case 3:
-        case 5:
-        case 7:
-        case 8:
-        case 10:
-        case 12:
-
-            printf("o mes %d tem 31 dias!\n", n);
-            break;
-
-        case 2:
-
-            printf("o mes %d tem 28 dias\n", n);
-            break;
-
-        case 4:
-        case 6:
-        case 9:
-        case 11:
-
-            printf("o mes %d tem 30 dias:\n", n);
-            break;
-
-        default:
-
-            printf("numero invalido!!\n");
-            break;
-
-
+        for(int i = 0; i < dias; i++){
+            printf("temperatura do dia %d:", i + 1);
+            scanf("%f", &temp[i]);
+            soma += temp[i];
         }
-            
 
-    //um switch digitar de 1 a 12 
+        media = soma / dias;
+
+        menor = temp[0];
+
+        menor = temp[0];
+
+            for(int i = 1; i < dias; i++){
+                if(temp[i] > maior){
+                    maior = temp[i];
+                    diaMaior = i + 1;
+                }
+                if(temp[i] < menor){
+                    menor = temp[i];
+                    diaMenor = i = 1;
+                }
+            }
+            for(int i = 0; i < dias; i++){
+                if(temp[i] > media){
+                    acimaMedia++;
+                }
+            }
+
+            printf("\n --- TEMPERATURA ---\n");
+
+            for(int i = 0; i < dias; i++){
+                printf("dia %d; %.1f\n", i + 1, temp[i]);
+            }
+
+            printf("\n media da semana: %.1f\n", media);
+            printf("maior: %.1f (dia %d)\n", maior, diaMaior);
+            printf("menor: %.1f (dia %d)\n", menor, diaMenor);
+            printf("dias acima da media: %d\n", acimaMedia);
+
+
+   
                return 0;
     }
