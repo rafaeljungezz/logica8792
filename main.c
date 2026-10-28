@@ -5,28 +5,55 @@
 #include<stdlib.h>
 #include<time.h>
 
-void matriz(int m[2][2]){
-    for(int i = 0; i < 2;i++){
-            for(int r = 0; r < 2; r++){
-                printf("%d\n", m[i][r]);
-            }
-            printf("\n");
-        }
-    }
 
-    
 
 int main(){
 
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);
 
-    int m[2][2] = {
-        {1, 2},
-        {3, 4}
-    };
+    char placa[10] = "";
+    int opcao; 
 
-        matriz(m);
+
+    do{
+        printf("\n--- MENU ---\n");
+        printf("1 - cadastrar placa\n");
+        printf("2 - mostrar placa cadastrada\n");
+        printf("0 - sair\n");
+        printf("\nescolha: ");
+        scanf("%d", &opcao);
+
+            switch(opcao){
+
+            case 1:
+
+                printf("digite a placa de um carro:");
+                scanf("%s", &placa);
+                break;
+
+            case 2: 
+
+                if(strlen(placa) == 0){
+                    printf("nenhuma placa registrada\n");
+                }else{
+                    printf("Sua placa é : %s\n", placa);
+                }
+                break;
+            
+            case 3:
+
+                printf("saindo..\n");
+                break;
+
+            default:
+
+                printf("numero inválido!\n");
+                break;
+                
+        }
         
-               return 0;
+            }while(opcao != 3);
+
+            return 0;
     }
