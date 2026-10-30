@@ -5,8 +5,11 @@
 #include<stdlib.h>
 #include<time.h>
 
-int quadrado(int n){
-    return n * n;
+void linha(int n){
+    for(int i = 0; i < n; i++){
+        printf("-");
+    printf("\n");
+    }
 }
 
 
@@ -16,12 +19,10 @@ int main(){
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);
 
-    int nn;
+    linha(30);
+    printf("Bem-VINDO AO SISTEMA\n");
+    linha(30);
 
-        printf("digite um numero: ");
-        scanf("%d", &nn);
-
-            printf("o quadrado do numero %d é: %d\n",nn, quadrado(nn));
 
             return 0;
     }
