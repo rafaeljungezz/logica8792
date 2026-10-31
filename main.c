@@ -14,14 +14,15 @@ int main(){
     SetConsoleOutputCP(65001);
 
     int numeros[5];
-    int soma = 0;
 
     for(int i = 0; i < 5; i++){
             printf("digite o numero: ", i + 1);
             scanf("%d", &numeros[i]);
-            soma = soma + numeros[i];
         }
-        printf("\nSoma = %d\n", soma);
+        printf("\nNumeros digitados: \n");
+            for(int i = 0; i < 5; i++){
+                printf("%d", numeros[i]);
+            }
 
             return 0;
     }
