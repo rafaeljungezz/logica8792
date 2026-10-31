@@ -13,17 +13,15 @@ int main(){
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);
 
-     int vet[10];
+    int numeros[5];
+    int soma = 0;
 
-        for(int i = 0; i < 10; i++){
-            printf("valor %d: ", i + 1);
-            scanf("%d", &vet[i]);
+    for(int i = 0; i < 5; i++){
+            printf("digite o numero: ", i + 1);
+            scanf("%d", &numeros[i]);
+            soma = soma + numeros[i];
         }
-
-        for(int i = 0; i < 10; i++){
-            printf("%d", vet[i]);
-        printf("\n");
-        }
+        printf("\nSoma = %d\n", soma);
 
             return 0;
     }
