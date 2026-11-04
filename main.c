@@ -5,26 +5,29 @@
 #include<stdlib.h>
 #include<time.h>
 
+int ehpar(int n){
+    return n % 2 == 0;
+}
 
 int main(){
 
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);
 
-    char texto[100];
+    int quantidade = 0;
+    int soma = 0;
 
-    int tamanho = 0;
+        printf("pares de 1 a 20: \n");
 
-        printf("digite uma frase: ");
-        fgets(texto, 100, stdin); //"std" é da biblioteca, "in" é de entrada
-
-            texto[strcspn(texto, "\n")] = '\0';
-
-                while(texto[tamanho] != '\0'){
-                    tamanho++;
+            for(int i = 1; i <= 20; i++){
+                if(ehpar(i)){
+                    printf("%d ", i);
+                    quantidade++;
+                    soma += i;
                 }
-                printf("quantidade de caracteres: %d\n", tamanho);
-
+            }
+            printf("\nQuantidade: %d \n ", quantidade);
+            printf("soma: %d\n", soma);
 
 
 
