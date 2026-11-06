@@ -5,13 +5,12 @@
 #include<stdlib.h>
 #include<time.h>
 
-    void contar(int n){
-        if(n == 0){
-            return; // retorna a propria funçao
-            }
-            contar(n - 1); // se chamar a funçao dentro da funçao DAI È RECURSAO
-            printf("%d\n", n);
+    int somar(int n){
+        if( n == 0){
+            return 0;
         }
+        return n + somar(n - 1);
+    }
     
 
 int main(){
@@ -19,7 +18,9 @@ int main(){
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);
 
-    contar(5);
+    int resultado = somar(5);
+
+        printf("resultado: %d\n", resultado);
     
        
             return 0;
