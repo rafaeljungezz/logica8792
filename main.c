@@ -5,21 +5,22 @@
 #include<stdlib.h>
 #include<time.h>
 
-    int fatorial(int n){
-        if(n == 0 || n == 1){
-            return 1;
+    void contar(int n){
+        if(n == 0){
+            return; // retorna a propria funçao
+            }
+            contar(n - 1); // se chamar a funçao dentro da funçao DAI È RECURSAO
+            printf("%d\n", n);
         }
-        return n * fatorial(n - 1);
-    }
+    
 
 int main(){
 
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);
 
-    int resultado = fatorial(5);
-
-        printf("fatorial: %d\n", resultado);
+    contar(5);
     
+       
             return 0;
     }
