@@ -5,13 +5,12 @@
 #include<stdlib.h>
 #include<time.h>
 
-    void contagem(int n){
-        if( n == 0){
-            printf("FOGO!\n");
+    void contar(int n){
+        if(n == 0){
             return;
         }
         printf("%d\n", n);
-        contagem(n - 1);
+        contar(n - 1);
     }
 
 int main(){
@@ -19,7 +18,7 @@ int main(){
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);
 
-    contagem(5);
+    contar(5);
     
             return 0;
     }
