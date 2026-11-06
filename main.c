@@ -5,11 +5,13 @@
 #include<stdlib.h>
 #include<time.h>
 
-    int potencia(int base, int expoente){
-        if(expoente == 0){
-            return 1;
+    void tabuada(int n, int contador){
+        if(contador > 10){
+            return;
         }
-        return base * potencia(base, expoente - 1);
+        printf("%d x %d = %d\n", n, contador, n * contador );
+
+        tabuada(n, contador + 1);
     }
     
 
@@ -18,7 +20,12 @@ int main(){
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);
 
-        printf("resultado: %d\n", potencia(2,4));
+    int n;
+        
+        printf("digite um numero: ");
+        scanf("%d", n);
+
+            tabuada(8,1); 
     
        
             return 0;
