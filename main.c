@@ -5,27 +5,20 @@
 #include<stdlib.h>
 #include<time.h>
 
-    void tabuada(int n, int contador){
-        if(contador > 10){
-            return;
+    int inverter(int n, int resultado){
+        if(n == 0){
+            return resultado;
         }
-        printf("%d x %d = %d\n", n, contador, n * contador );
-
-        tabuada(n, contador + 1);
+        return inverter(n / 10, resultado * 10 + n % 10);
     }
-    
 
 int main(){
 
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);
-
-    int n;
         
-        printf("digite um numero: ");
-        scanf("%d", n);
-
-            tabuada(8,1); 
+        printf("invertido: %d\n", inverter(1234, 0));
+       
     
        
             return 0;
