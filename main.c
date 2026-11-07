@@ -5,11 +5,15 @@
 #include<stdlib.h>
 #include<time.h>
 
-    int inverter(int n, int resultado){
+    int fibonacci(int n){
         if(n == 0){
-            return resultado;
+            return 0;
         }
-        return inverter(n / 10, resultado * 10 + n % 10);
+        if(n == 1){
+            return 1;
+        }
+        return fibonacci(n - 1) + fibonacci(n - 2);
+     
     }
 
 int main(){
@@ -17,7 +21,11 @@ int main(){
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);
         
-        printf("invertido: %d\n", inverter(1234, 0));
+    int i;
+
+        for(i = 0; i < 10; i++){
+            printf("%d", fibonacci(i));
+        }
        
     
        
