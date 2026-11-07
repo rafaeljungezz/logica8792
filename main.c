@@ -5,14 +5,14 @@
 #include<stdlib.h>
 #include<time.h>
 
-    int fibonacci(int n){
-        if(n == 0){
-            return 0;
-        }
-        if(n == 1){
+    int palindromo(char palavra[], int inicio, int fim){
+        if(inicio >= fim){
             return 1;
         }
-        return fibonacci(n - 1) + fibonacci(n - 2);
+        if(palavra[inicio] != palavra[fim]){
+            return 0;
+        }
+        return palindromo(palavra, inicio + 1, fim - 1);
      
     }
 
@@ -21,13 +21,13 @@ int main(){
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);
         
-    int i;
+    char palavra[50] = "rafa";
 
-        for(i = 0; i < 10; i++){
-            printf("%d", fibonacci(i));
+        if(palindromo(palavra, 0, strlen(palavra) - 1)){
+            printf("é palíndromo!\n");
+        }else{
+            printf("não é palíndromo!\n");
         }
-       
-    
        
             return 0;
     }
