@@ -5,13 +5,13 @@
 #include<stdlib.h>
 #include<time.h>
 
-    int soma(int n){
-       int total = 0;
+    long long fatorial(int n){
+        long long resultado = 1;
 
-        for( int i = 1; i <= n; i++){
-           total += i;
-        }
-        return total;
+            for(int i = 2; i <= n; i++){
+                resultado *= i;
+            }
+            return resultado;
     }
 
 int main(){
@@ -19,8 +19,12 @@ int main(){
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);
     
-   
-    printf("soma de 1 a 5: %d\n", soma(5));  
+    int num;
+
+        printf("digite um valor: ");
+        scanf("%d", &num);
+
+            printf("fatorial de %d: %lld\n", num, fatorial(num));  
 
     
             return 0;
