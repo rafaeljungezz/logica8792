@@ -5,8 +5,8 @@
 #include<stdlib.h>
 #include<time.h>
 
-    float areaRetangulo(float base, float altura){
-            return base * altura;
+    float celciusParaFahrenheit(float c){
+        return c * 9 / 5 + 32;
     }
 
 int main(){
@@ -14,7 +14,17 @@ int main(){
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);
         
-    printf("area: %.2f\n", areaRetangulo(5, 3.5));
+    float celcius;
+    float fahrenheit;
+
+        printf("digite a temperatura em culcius: ");
+        scanf("%f", &celcius);
+
+        fahrenheit = celciusParaFahrenheit(celcius);
+
+            printf("%.1f C = %.1f F\n", celcius, fahrenheit);
+        
+
     
             return 0;
     }
