@@ -5,12 +5,17 @@
 #include<stdlib.h>
 #include<time.h>
 
-    int absoluto(int n){
-        if(n < 0 ){
-            return -n;
+    int maiorDeTres(int a, int b, int c){
+        int maior = a;
+
+            if(b > maior){
+                maior = b;
+
+            }if(c > maior){
+                maior = c;
             }
-            return n;
-        }
+            return maior;
+    }
     
 
 int main(){
@@ -18,12 +23,12 @@ int main(){
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);
 
-    printf("%d\n", absoluto(-8));
+int aa, bb, cc;
 
-    printf("%d\n", absoluto(4));
+    printf("digite 3 nuemeros: ");
+    scanf("%d %d %d", &aa, &bb, &cc);
 
-    printf("%d\n", absoluto(0));
-        
+        printf("Maior: %d\n", maiorDeTres(aa, bb, cc));
 
             return 0;
     }
