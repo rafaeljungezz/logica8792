@@ -5,27 +5,24 @@
 #include<stdlib.h>
 #include<time.h>
 
-    int quadrado(int n){
-        return n * n;
-    }
-
-    int cubo(int nn){
-        return nn * nn * nn;
-    }
+    int absoluto(int n){
+        if(n < 0 ){
+            return -n;
+            }
+            return n;
+        }
+    
 
 int main(){
 
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);
 
-    int numQuadrado;
-    
+    printf("%d\n", absoluto(-8));
 
-        printf("digite um valor para quadrado: ");
-        scanf("%d", &numQuadrado);
+    printf("%d\n", absoluto(4));
 
-            printf("quadrado: %d\n Cubo: %d\n", quadrado(numQuadrado), cubo(numQuadrado));  
-
+    printf("%d\n", absoluto(0));
         
 
             return 0;
