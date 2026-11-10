@@ -5,13 +5,12 @@
 #include<stdlib.h>
 #include<time.h>
 
-    int potencial(int base, int expoente){
-        int resultado = 1;
+    int quadrado(int n){
+        return n * n;
+    }
 
-            for(int i = 1; i < expoente; i++){
-                resultado *= base;
-            }
-            return resultado;
+    int cubo(int nn){
+        return nn * nn * nn;
     }
 
 int main(){
@@ -19,8 +18,15 @@ int main(){
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);
 
-            printf("2 elevado a 5 = %d\n", potencial(2, 5));  
-
+    int numQuadrado;
     
+
+        printf("digite um valor para quadrado: ");
+        scanf("%d", &numQuadrado);
+
+            printf("quadrado: %d\n Cubo: %d\n", quadrado(numQuadrado), cubo(numQuadrado));  
+
+        
+
             return 0;
     }
