@@ -5,23 +5,24 @@
 #include<stdlib.h>
 #include<time.h>
 
-    int somaPares(int n){
-        int soma = 0;
-
-            for(int i = 2; i <= n; i += 2){
-                soma += i;
-            }
-            return soma;
-    }
+    
 
 int main(){
 
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);
 
-    printf("soma dos pares até 10: %d\n", somaPares(10));
+    int n;
 
+        printf("digite N: ");
+        scanf("%d", &n);
 
+            for(int i = 1; i <= n; i++){
+                for(int r = 1; r <= n; r++){
+                    printf("* ");
+                }
+                printf("\n");
+            }
 
-    return 0;
+        return 0;
     }
