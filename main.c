@@ -12,13 +12,14 @@ int main(){
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);
 
-    int total = 0;
+    int soma = 0;
 
-        for(int i = 1; i <= 100; i++){
-            if(i % 10 == 7){
-                printf("%d\n", i);
+        for(int i = 1; i <= 50; i++){
+            if(i % 2 == 1){
+                soma += i;
             }
         }
+        printf("\n Soma: %d\n", soma);
     
         return 0;
     }
