@@ -13,14 +13,20 @@ int main(){
     SetConsoleOutputCP(65001);
 
     int total = 0;
+    
 
-        for(int i = 1; i <= 200; i++){
-            if(i % 10 == 3){
+        for(int i = 10; i <= 99; i++){
+                int dezena = i / 10;
+                int unidade = i % 10;
+
+            if(dezena + unidade == 10){
                 printf("%d\n", i);
                 total++;
             }
+                
+            
         }
-        printf("Quantidade de numeros terminados em 3: %d", total);
+        printf("Quantidade de numeros: %d", total);
        
 
         return 0;
