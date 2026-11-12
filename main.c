@@ -12,15 +12,15 @@ int main(){
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);
 
-    int total = 0;
+        int total = 0;
 
-        for(int i = 1; i <= 1000; i++){
-            if(i % 7 == 0 && i % 2 == 1){
-                printf("%d\n", i);
-                total++;
+            for(int ano = 2000; ano <=2030; ano++){
+                if(ano % 4 == 0){
+                    printf("%d é bissexto\n", ano);
+                }
             }
-        }
-        printf("divisores por 7 e não por 2: %d\n", total);
+
+       
 
         return 0;
     }
