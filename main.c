@@ -16,11 +16,11 @@ int main(){
 
         int total = 0;
 
-            for(int i = 10; i <= 99; i++){
+            for(int i = 1; i <= 100; i++){
                 int dezena = i / 10;
                 int unidade = i % 10;
 
-                    if(unidade == 2 * dezena){
+                    if(i %  4== 0){
                         printf("%d\n", i);
                         total++;
                     }
