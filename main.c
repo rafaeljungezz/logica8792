@@ -12,25 +12,19 @@ int main(){
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);
 
-    char palavra[50];
-    int tamanho;
-    int palindromo = 1;
+    int total = 0;
 
-        printf("digite uma palavra: ");
-        scanf("%49s", &palavra);
+        //terminam em 7 e sao multiplos de 3;
 
-            tamanho = strlen(palavra);
+        for(int i = 1; i <= 500; i++){
+            int unidade = i % 10;
 
-                for(int i = 0; i < tamanho / 2; i++){
-                    if(palavra[i] != palavra[tamanho - 1 - i]){
-                        palindromo = 0;
-                    }
+                if(i % 10 == 7 && i % 3 == 0 ){
+                    printf("%d\n", i);
+                    total++;
                 }
-                if(palindromo == 1){
-                    printf("A palavra é um palindromo\n");
-                }else{
-                    printf("a palavra não é um palindromo\n");
-                }
+        }
+        printf("total: %d", total);
 
         return 0;
     }
