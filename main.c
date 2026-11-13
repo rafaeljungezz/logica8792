@@ -12,18 +12,20 @@ int main(){
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);
 
-    int total = 0;
+    // unidade = dobro da dezena
 
-        for(int i = 10; i <= 99; i++){
-            int dezena = i / 10;
-            int unidade = i % 10;
+        int total = 0;
 
-                if(unidade > dezena){
-                    total++;
-                }
-        }
-        printf("total é: %d\n", total);
-       
+            for(int i = 10; i <= 99; i++){
+                int dezena = i / 10;
+                int unidade = i % 10;
+
+                    if(unidade == 2 * dezena){
+                        printf("%d\n", i);
+                        total++;
+                    }
+            }
+            printf("o total é: %d", total);
 
         return 0;
     }
