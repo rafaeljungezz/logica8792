@@ -13,20 +13,16 @@ int main(){
     SetConsoleOutputCP(65001);
 
     int total = 0;
-    
 
         for(int i = 10; i <= 99; i++){
-                int dezena = i / 10;
-                int unidade = i % 10;
+            int dezena = i / 10;
+            int unidade = i % 10;
 
-            if(dezena + unidade == 10){
-                printf("%d\n", i);
-                total++;
-            }
-                
-            
+                if(unidade > dezena){
+                    total++;
+                }
         }
-        printf("Quantidade de numeros: %d", total);
+        printf("total é: %d\n", total);
        
 
         return 0;
