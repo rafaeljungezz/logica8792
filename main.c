@@ -12,20 +12,25 @@ int main(){
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);
 
-    // unidade = dobro da dezena
+    char palavra[50];
+    int tamanho;
+    int palindromo = 1;
 
-        int total = 0;
+        printf("digite uma palavra: ");
+        scanf("%49s", &palavra);
 
-            for(int i = 1; i <= 100; i++){
-                int dezena = i / 10;
-                int unidade = i % 10;
+            tamanho = strlen(palavra);
 
-                    if(i %  4== 0){
-                        printf("%d\n", i);
-                        total++;
+                for(int i = 0; i < tamanho / 2; i++){
+                    if(palavra[i] != palavra[tamanho - 1 - i]){
+                        palindromo = 0;
                     }
-            }
-            printf("o total é: %d", total);
+                }
+                if(palindromo == 1){
+                    printf("A palavra é um palindromo\n");
+                }else{
+                    printf("a palavra não é um palindromo\n");
+                }
 
         return 0;
     }
